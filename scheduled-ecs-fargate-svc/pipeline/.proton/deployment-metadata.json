@@ -1,6 +1,6 @@
 {
-  "deploymentId" : "<proton-resource-deleted>",
-  "isResourceDeleted" : true,
+  "deploymentId" : "c464336b-8da9-4ef3-8ab1-74a6b200147c",
+  "isResourceDeleted" : false,
   "resourceMetadata" : {
     "arn" : "arn:aws:proton:ap-northeast-1:443437525071:service/scheduled-ecs-fargate-svc/pipeline",
     "templateArn" : "arn:aws:proton:ap-northeast-1:443437525071:service-template/scheduled-ecs-fargate-svc",
