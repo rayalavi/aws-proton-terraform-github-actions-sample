@@ -1,0 +1,11 @@
+{
+  "deploymentId" : "79d5d096-1a1a-4288-9d40-106429596376",
+  "isResourceDeleted" : false,
+  "resourceMetadata" : {
+    "arn" : "arn:aws:proton:ap-northeast-1:443437525071:service/scheduled-ecs-fargate-svc/service-instance/scheduled-ecs-fargate-svc",
+    "templateArn" : "arn:aws:proton:ap-northeast-1:443437525071:service-template/scheduled-ecs-fargate-svc",
+    "templateMajorVersion" : "1",
+    "templateMinorVersion" : "4",
+    "environmentArn" : "arn:aws:proton:ap-northeast-1:443437525071:environment/fargate-env"
+  }
+}
