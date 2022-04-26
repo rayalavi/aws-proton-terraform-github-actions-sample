@@ -1,0 +1,10 @@
+{
+  "deploymentId" : "c8c92068-83d5-430d-973f-cabe64f4f5d0",
+  "isResourceDeleted" : false,
+  "resourceMetadata" : {
+    "arn" : "arn:aws:proton:ap-northeast-1:443437525071:service/scheduled-ecs-fargate-svc/pipeline",
+    "templateArn" : "arn:aws:proton:ap-northeast-1:443437525071:service-template/scheduled-ecs-fargate-svc",
+    "templateMajorVersion" : "1",
+    "templateMinorVersion" : "5"
+  }
+}
