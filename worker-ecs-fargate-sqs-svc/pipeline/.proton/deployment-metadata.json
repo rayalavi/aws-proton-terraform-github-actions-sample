@@ -1,0 +1,10 @@
+{
+  "deploymentId" : "a34863f2-b5ab-491e-863a-cbbf8dca80c8",
+  "isResourceDeleted" : false,
+  "resourceMetadata" : {
+    "arn" : "arn:aws:proton:ap-northeast-1:443437525071:service/worker-ecs-fargate-sqs-svc/pipeline",
+    "templateArn" : "arn:aws:proton:ap-northeast-1:443437525071:service-template/worker-ecs-fargate-sqs-svc",
+    "templateMajorVersion" : "1",
+    "templateMinorVersion" : "10"
+  }
+}
