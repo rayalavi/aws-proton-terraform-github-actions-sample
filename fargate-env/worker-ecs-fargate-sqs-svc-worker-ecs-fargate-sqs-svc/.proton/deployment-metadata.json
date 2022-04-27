@@ -1,0 +1,11 @@
+{
+  "deploymentId" : "beb60556-1bb8-4fae-af05-f966d4d0e165",
+  "isResourceDeleted" : false,
+  "resourceMetadata" : {
+    "arn" : "arn:aws:proton:ap-northeast-1:443437525071:service/worker-ecs-fargate-sqs-svc/service-instance/worker-ecs-fargate-sqs-svc",
+    "templateArn" : "arn:aws:proton:ap-northeast-1:443437525071:service-template/worker-ecs-fargate-sqs-svc",
+    "templateMajorVersion" : "1",
+    "templateMinorVersion" : "9",
+    "environmentArn" : "arn:aws:proton:ap-northeast-1:443437525071:environment/fargate-env"
+  }
+}
