@@ -1,11 +1,11 @@
 {
-  "deploymentId" : "2f814949-2098-4738-82e3-7d6e281133cb",
+  "deploymentId" : "f3444a91-83ff-4333-a010-4746ac5dd7ba",
   "isResourceDeleted" : false,
   "resourceMetadata" : {
     "arn" : "arn:aws:proton:ap-northeast-1:443437525071:service/scheduled-ecs-fargate-svc/service-instance/scheduled-ecs-fargate-svc",
     "templateArn" : "arn:aws:proton:ap-northeast-1:443437525071:service-template/scheduled-ecs-fargate-svc",
     "templateMajorVersion" : "1",
-    "templateMinorVersion" : "0",
+    "templateMinorVersion" : "2",
     "environmentArn" : "arn:aws:proton:ap-northeast-1:443437525071:environment/fargate-env"
   }
 }
