@@ -1,5 +1,9 @@
 /*
-This file is no longer managed by AWS Proton. The associated resource has been deleted in Proton.
+This file is managed by AWS Proton. Any changes made directly to this file will be overwritten the next time AWS Proton performs an update.
+
+To manage this resource, see AWS Proton Resource: arn:aws:proton:ap-northeast-1:443437525071:service/scheduled-ecs-fargate-svc/pipeline
+
+If the resource is no longer accessible within AWS Proton, it may have been deleted and may require manual cleanup.
 */
 
 data "aws_region" "current" {}
@@ -105,8 +109,8 @@ data "aws_iam_policy_document" "deployment_role_policy" {
   statement {
     effect = "Allow"
     resources = [
-      "arn:aws:logs:${local.region}:${local.account_id}:log-group:/aws/codebuild/Deploy*Project*",
-      "arn:aws:logs:${local.region}:${local.account_id}:log-group:/aws/codebuild/Deploy*Project:*",
+      "arn:aws:logs:${local.region}:${local.account_id}:log-group:/aws/codebuild/deploy-*",
+      "arn:aws:logs:${local.region}:${local.account_id}:log-group:/aws/codebuild/deploy-:*",
     ]
     actions = [
       "logs:CreateLogGroup",
@@ -117,7 +121,7 @@ data "aws_iam_policy_document" "deployment_role_policy" {
   statement {
     effect = "Allow"
     resources = [
-      "arn:aws:codebuild:${local.region}:${local.account_id}:report-group:/Deploy*Project-*",
+      "arn:aws:codebuild:${local.region}:${local.account_id}:report-group:/deploy--*",
     ]
     actions = [
       "codebuild:CreateReportGroup",
@@ -304,7 +308,7 @@ data "aws_iam_policy_document" "pipeline_build_codepipeline_action_role_policy" 
 data "aws_iam_policy_document" "pipeline_deploy_codepipeline_action_role_policy" {
   statement {
     effect    = "Allow"
-    resources = ["arn:aws:codebuild:${local.region}:${local.account_id}:project/Deploy*", ]
+    resources = ["arn:aws:codebuild:${local.region}:${local.account_id}:project/deploy-*", ]
     actions = [
       "codebuild:BatchGetBuilds",
       "codebuild:StartBuild",
