@@ -1,5 +1,9 @@
 /*
-This file is no longer managed by AWS Proton. The associated resource has been deleted in Proton.
+This file is managed by AWS Proton. Any changes made directly to this file will be overwritten the next time AWS Proton performs an update.
+
+To manage this resource, see AWS Proton Resource: arn:aws:proton:ap-northeast-1:443437525071:service/scheduled-ecs-fargate-svc/pipeline
+
+If the resource is no longer accessible within AWS Proton, it may have been deleted and may require manual cleanup.
 */
 
 resource "aws_ecr_repository" "ecr_repo" {
@@ -113,7 +117,7 @@ EOF
 resource "aws_codebuild_project" "deploy_project" {
   for_each = { for instance in var.service_instances : instance.name => instance }
 
-  name         = "${var.service.name}-deploy-${index(var.service_instances, each.value)}-project"
+  name         = "deploy-${var.service.name}-${index(var.service_instances, each.value)}"
   service_role = aws_iam_role.deployment_role.arn
 
   artifacts {
@@ -315,18 +319,18 @@ resource "aws_codepipeline" "pipeline" {
     for_each = toset(var.service_instances)
 
     content {
-      name = "Deploy${index(var.service_instances, stage.value)}Project"
+      name = "deploy-${var.service.name}-${index(var.service_instances, stage.value)}"
 
       action {
         category  = "Build"
-        name      = "Deploy${index(var.service_instances, stage.value)}"
+        name      = "deploy-${var.service.name}-${index(var.service_instances, stage.value)}"
         owner     = "AWS"
         provider  = "CodeBuild"
         version   = "1"
         run_order = 1
 
         configuration = {
-          ProjectName = "${var.service.name}-deploy-${index(var.service_instances, stage.value)}-project"
+          ProjectName = "deploy-${var.service.name}-${index(var.service_instances, stage.value)}"
         }
         input_artifacts = ["BuildOutput"]
         role_arn        = aws_iam_role.pipeline_deploy_codepipeline_action_role.arn
