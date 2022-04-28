@@ -1,0 +1,10 @@
+{
+  "deploymentId" : "0717680b-fa07-4ede-8387-715ef3004628",
+  "isResourceDeleted" : false,
+  "resourceMetadata" : {
+    "arn" : "arn:aws:proton:ap-northeast-1:443437525071:service/load-balanced-ecs-ec2-svc/pipeline",
+    "templateArn" : "arn:aws:proton:ap-northeast-1:443437525071:service-template/load-balanced-ecs-ec2-svc",
+    "templateMajorVersion" : "1",
+    "templateMinorVersion" : "0"
+  }
+}
