@@ -1,0 +1,11 @@
+{
+  "deploymentId" : "81a52f3b-5135-46de-93cc-4567377d0b6d",
+  "isResourceDeleted" : false,
+  "resourceMetadata" : {
+    "arn" : "arn:aws:proton:ap-northeast-1:443437525071:service/load-balanced-ecs-ec2-svc/service-instance/load-balanced-ecs-ec2-svc",
+    "templateArn" : "arn:aws:proton:ap-northeast-1:443437525071:service-template/load-balanced-ecs-ec2-svc",
+    "templateMajorVersion" : "1",
+    "templateMinorVersion" : "2",
+    "environmentArn" : "arn:aws:proton:ap-northeast-1:443437525071:environment/ecs-ec2-env"
+  }
+}
