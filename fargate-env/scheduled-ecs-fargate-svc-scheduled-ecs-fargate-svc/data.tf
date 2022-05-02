@@ -1,5 +1,9 @@
 /*
-This file is no longer managed by AWS Proton. The associated resource has been deleted in Proton.
+This file is managed by AWS Proton. Any changes made directly to this file will be overwritten the next time AWS Proton performs an update.
+
+To manage this resource, see AWS Proton Resource: arn:aws:proton:ap-northeast-1:443437525071:service/scheduled-ecs-fargate-svc/service-instance/scheduled-ecs-fargate-svc
+
+If the resource is no longer accessible within AWS Proton, it may have been deleted and may require manual cleanup.
 */
 
 data "aws_region" "current" {}
@@ -27,3 +31,4 @@ data "aws_iam_policy_document" "ecs_task_execution_role_policy" {
     resources = [var.environment.outputs.SnsTopicArn]
   }
 }
+
