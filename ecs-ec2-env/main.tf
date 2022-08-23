@@ -1,7 +1,7 @@
 /*
 This file is managed by AWS Proton. Any changes made directly to this file will be overwritten the next time AWS Proton performs an update.
 
-To manage this resource, see AWS Proton Resource: arn:aws:proton:ap-northeast-1:443437525071:environment/ecs-ec2-env
+To manage this resource, see AWS Proton Resource: arn:aws:proton:us-east-1:443437525071:environment/ecs-ec2-env
 
 If the resource is no longer accessible within AWS Proton, it may have been deleted and may require manual cleanup.
 */
@@ -121,12 +121,6 @@ resource "aws_sns_topic" "ping_topic" {
 
 resource "aws_sns_topic" "ecs_drain_hook_topic" {
   name_prefix = "ecs_drain_hook-"
-}
-
-resource "aws_sns_topic_subscription" "ecs_drain_hook_topic_subscription" {
-  endpoint  = aws_lambda_function.ecs_drain_function.arn
-  protocol  = "lambda"
-  topic_arn = aws_sns_topic.ecs_drain_hook_topic.arn
 }
 
 resource "aws_lambda_function" "ecs_drain_function" {
