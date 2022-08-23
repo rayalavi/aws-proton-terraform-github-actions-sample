@@ -6,15 +6,8 @@ To manage this resource, see AWS Proton Resource: arn:aws:proton:us-east-1:44343
 If the resource is no longer accessible within AWS Proton, it may have been deleted and may require manual cleanup.
 */
 
-variable "environment" {
-  type = object({
-    inputs = map(string)
-    name   = string
-  })
-  default = null
-}
-
-variable "proton_tags" {
-  type = map(string)
-  default = null
+locals {
+  account_id = data.aws_caller_identity.current.account_id
+  region     = data.aws_region.current.id
+  partition  = data.aws_partition.current.id
 }
